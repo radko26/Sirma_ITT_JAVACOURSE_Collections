@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.sirma.itt.javacourse.collections.pagebean.PageBeanTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.sirma.itt.javacourse.collections.pagebean.PageBeanTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/java/jdk1.8.0_05/jre/lib/amd64"/>
@@ -24,13 +24,13 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/home/radoslav/JAVA/ITT1/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf3012297244963186070.tmp"/>
+    <property name="classworlds.conf" value="/home/radoslav/JAVA/ITT1/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf4699103939536043375.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="3.14.8-200.fc20.x86_64"/>
+    <property name="os.version" value="3.14.9-200.fc20.x86_64"/>
     <property name="user.home" value="/home/radoslav"/>
     <property name="user.timezone" value="Europe/Sofia"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -59,6 +59,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.sirma.itt.javacourse.collections.pagebean.PageBeanTest" name="testLastPage" time="0.003"/>
-  <testcase classname="com.sirma.itt.javacourse.collections.pagebean.PageBeanTest" name="testNextAndPrevious" time="0.003"/>
+  <testcase classname="com.sirma.itt.javacourse.collections.pagebean.PageBeanTest" name="testNextAndPrevious" time="0.001"/>
+  <testcase classname="com.sirma.itt.javacourse.collections.pagebean.PageBeanTest" name="testLastPage" time="0"/>
 </testsuite>
