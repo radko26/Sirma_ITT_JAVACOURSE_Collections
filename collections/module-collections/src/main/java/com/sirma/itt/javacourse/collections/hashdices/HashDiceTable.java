@@ -38,7 +38,7 @@ public class HashDiceTable {
 	}
 
 	/**
-	 * Getter method.
+	 * Gets the table with all the results.
 	 * 
 	 * @return Returns the table.
 	 */
