@@ -18,7 +18,11 @@ public class ExceptionMessageManager {
 	private static final Pattern PATTERN = Pattern.compile("[^+" + SEPARATOR
 			+ "]+?" + SEPARATOR);
 	private StringBuilder message = new StringBuilder();
-
+	/**
+	 * Initializes the map.
+	 * @param exceptions
+	 * 		A map containing all the exception messages.
+	 */
 	public ExceptionMessageManager(Map<String, String> exceptions) {
 		this.exceptions = exceptions;
 	}
@@ -43,7 +47,8 @@ public class ExceptionMessageManager {
 	 */
 	public void addExceptionMessage(String mess) throws Exception {
 		if (exceptions.containsValue(mess)) {
-			message.append(mess + SEPARATOR);
+			message.append(mess);
+			message.append(SEPARATOR);
 		} else {
 			throw new Exception("This message has already been added");
 		}
@@ -61,7 +66,8 @@ public class ExceptionMessageManager {
 	public void addExceptionMessageUsingCode(String messageCode)
 			throws Exception {
 		if (exceptions.containsKey(messageCode)) {
-			message.append((SEPARATOR + exceptions.get(messageCode)));
+			message.append(SEPARATOR);
+			message.append(exceptions.get(messageCode));
 		} else {
 			throw new Exception("No such key found");
 		}
@@ -81,7 +87,6 @@ public class ExceptionMessageManager {
 			collection.add(m.group().substring(0, m.group().length() - 1));
 		}
 		return collection;
-
 	}
 
 }

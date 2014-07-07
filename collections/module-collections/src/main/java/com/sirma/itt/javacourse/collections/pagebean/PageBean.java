@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
  */
 public class PageBean<E> {
 	private ArrayList<List<E>> pages;
-	private static final Logger log = LoggerFactory.getLogger(PageBean.class);
+	private static final Logger LOG = LoggerFactory.getLogger(PageBean.class);
 	private int currentPage;
 
 	/**
@@ -72,7 +72,7 @@ public class PageBean<E> {
 		if (hasNext()) {
 			currentPage += 1;
 		} else {
-			log.warn("No more pages.");
+			LOG.warn("No more pages.");
 		}
 		return pages.get(currentPage);
 	}
@@ -86,7 +86,7 @@ public class PageBean<E> {
 		if (hasPrevious()) {
 			currentPage -= 1;
 		} else {
-			log.warn("No previous pages available.");
+			LOG.warn("No previous pages available.");
 		}
 		return pages.get(currentPage);
 	}

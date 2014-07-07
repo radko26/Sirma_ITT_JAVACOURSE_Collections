@@ -21,6 +21,8 @@ public class HashDiceTable {
 	}
 
 	/**
+	 * Inserts information about the combination in the table.If the entry
+	 * hasn't been met yet it adds it to the table.
 	 * 
 	 * @param combination
 	 *            The combination passed by string with format [ first,second ];
@@ -38,7 +40,7 @@ public class HashDiceTable {
 	}
 
 	/**
-	 * Getter method.
+	 * Gets the table with all the results.
 	 * 
 	 * @return Returns the table.
 	 */
