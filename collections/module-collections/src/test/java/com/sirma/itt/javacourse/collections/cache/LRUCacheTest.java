@@ -22,8 +22,7 @@ public class LRUCacheTest {
 		test.add("poza", "groza");
 		test.add("hala", "dala");
 		test.add("boza", "moza");
-		test.add("mivka","pivka");
-		
+		test.add("mivka", "pivka");
 		assertTrue(!test.getTable().containsKey("poza"));
 	}
 

@@ -45,18 +45,27 @@ public class PageBeanTest {
 	public void testNextAndPrevious() {
 		temp = bean.firstPage();
 		temp = bean.previous();
-		assertEquals(test.subList(0, (PAGESIZE > test.size()) ? test.size()
-				: PAGESIZE), temp);
+		if (PAGESIZE > test.size()) {
+			assertEquals(test.subList(0, test.size()), temp);
+		} else {
+			assertEquals(test.subList(0, PAGESIZE), temp);
+		}
 		for (int i = 0; i < (test.size() / PAGESIZE) + (test.size() % PAGESIZE)
 				- 1; i++) {
-			assertEquals(test.subList(i * PAGESIZE,
-					(i + 1) * PAGESIZE > test.size() ? test.size() : (i + 1)
-							* PAGESIZE), temp);
+			if ((i + 1) * PAGESIZE > test.size()) {
+				assertEquals(test.subList(i * PAGESIZE, test.size()), temp);
+			} else {
+				assertEquals(test.subList(i * PAGESIZE, (i + 1) * PAGESIZE),
+						temp);
+			}
 			temp = bean.next();
 			temp = bean.previous();
-			assertEquals(test.subList(i * PAGESIZE,
-					(i + 1) * PAGESIZE > test.size() ? test.size() : (i + 1)
-							* PAGESIZE), temp);
+			if ((i + 1) * PAGESIZE > test.size()) {
+				assertEquals(test.subList(i * PAGESIZE, test.size()), temp);
+			} else {
+				assertEquals(test.subList(i * PAGESIZE, (i + 1) * PAGESIZE),
+						temp);
+			}
 			temp = bean.next();
 		}
 	}
@@ -67,10 +76,14 @@ public class PageBeanTest {
 	@Test
 	public void testLastPage() {
 		temp = bean.lastPage();
-		assertEquals(
-				test.subList(test.size() % PAGESIZE == 0 ? test.size()
-						- PAGESIZE : test.size() - test.size() % PAGESIZE,
-						test.size()), temp);
+		if (test.size() % PAGESIZE == 0) {
+			assertEquals(test.subList(test.size() - PAGESIZE, test.size()),
+					temp);
+		} else {
+			assertEquals(
+					test.subList(test.size() - test.size() % PAGESIZE,
+							test.size()), temp);
+		}
 	}
 
 }

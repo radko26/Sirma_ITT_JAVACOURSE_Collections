@@ -21,8 +21,9 @@ public class LRUCache<K, V>{
 	 * @param capacity
 	 * 		the capacity of the container
 	 */
+	@SuppressWarnings("serial")
 	public LRUCache(final int capacity){
-		table = new LinkedHashMap<K, V>(capacity,(float)0.75,true){
+		table = new LinkedHashMap<K, V>(capacity,0.75f,true){
 			@Override
 			protected boolean removeEldestEntry(Map.Entry<K, V> eldest){
 			    return size() > capacity;
